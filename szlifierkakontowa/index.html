@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="top">
+        <div class="A">
+            <label for="A">A</label>
+            <input type="number" id="A">
+        </div>
+        <div class="B">
+            <label for="B">B</label>
+            <input type="number" id="B">
+        </div>
+        <div class="C">
+            <label for="C">C</label>
+            <input type="number" id="C">
+        </div>
+    </div>
+    <div class="srodek">
+        <div>
+            <input type="radio" name="bomba" id="dodawanie">
+            <label>Dodawanie</label>
+        </div>
+        <div>
+            <input type="radio" name="bomba" id="odejmowanie">
+            <label>Odejmowanie</label>
+        </div>
+        <div>
+            <input type="radio" name="bomba" id="mnozenie">
+            <label>Mnożenie</label>
+        </div>
+        <div>
+            <input type="radio" name="bomba" id="dzielenie">
+            <label>Dzielenie</label>
+        </div>
+        
+        
+        
+        
+    </div>
+    <div class="bottom">
+        Wynik:
+        <button onclick="liczenie()">Licz</button>
+        <div id="parz"></div>   
+        <div id="wygranie"></div>
+        <div class="X">
+            <div id="wynik"></div>
+        </div>
+    </div>
+    <script>
+        function liczenie(){
+            var inputValue1 = document.getElementById("A").value
+            var inputValue2 = document.getElementById("B").value
+            var inputValue3 = document.getElementById("C").value
+            
+
+            inputValue1 = parseInt(inputValue1)
+            inputValue2 = parseInt(inputValue2)
+            inputValue3 = parseInt(inputValue3)
+            
+            if(dodawanie.checked){
+                sum = inputValue1 + inputValue2 + inputValue3;
+                document.getElementById("wynik").textContent = sum;
+                
+                if(sum %2 == 0)
+                {
+                    document.getElementById("parz").textContent = "Wynik jest parzysty";
+                    document.getElementById("wynik").style.color = "green";
+                }
+                else
+                {
+                    document.getElementById("parz").textContent = "Wynik jest nie parzysty";
+                    document.getElementById("wynik").style.color = "red";
+                }
+                if(sum > 100 && sum < 200 && sum %2 == 0 && sum %3 == 0 && sum %5 ==0){document.getElementById("wygranie").textContent = "Wygrałeś!";}else{}
+            }
+            else if(odejmowanie.checked){
+                sum = inputValue1 - inputValue2 - inputValue3;
+                document.getElementById("wynik").textContent = sum;
+                
+                if(sum %2 == 0)
+                {
+                    document.getElementById("parz").textContent = "Wynik jest parzysty";
+                    document.getElementById("wynik").style.color = "green";
+                }
+                else
+                {
+                    document.getElementById("parz").textContent = "Wynik jest nie parzysty";
+                    document.getElementById("wynik").style.color = "red";
+                }
+                if(sum > 100 && sum < 200 && sum %2 == 0 && sum %3 == 0 && sum %5 ==0){document.getElementById("wygranie").textContent = "Wygrałeś!";}else{}
+            }
+            else if(mnozenie.checked){
+                sum = inputValue1 * inputValue2 * inputValue3;
+                document.getElementById("wynik").textContent = sum;
+                
+                if(sum %2 == 0)
+                {
+                    document.getElementById("parz").textContent = "Wynik jest parzysty";
+                    document.getElementById("wynik").style.color = "green";
+                }
+                else
+                {
+                    document.getElementById("parz").textContent = "Wynik jest nie parzysty";
+                    document.getElementById("wynik").style.color = "red";
+                }
+                if(sum > 100 && sum < 200 && sum %2 == 0 && sum %3 == 0 && sum %5 ==0){document.getElementById("wygranie").textContent = "Wygrałeś!";}else{}
+            }
+            else if(dzielenie.checked){
+                if(inputValue2 != 0 && inputValue3 != 0){
+                    sum = inputValue1 / inputValue2 / inputValue3;
+                    document.getElementById("wynik").textContent = sum;
+                    
+                    if(sum %2 == 0)
+                    {
+                        document.getElementById("parz").textContent = "Wynik jest parzysty";
+                        document.getElementById("wynik").style.color = "green";
+                        if(sum > 100 && sum < 200 && sum %2 == 0 && sum %3 == 0 && sum %5 ==0){document.getElementById("wygranie").textContent = "Wygrałeś!";}else{}
+                    }
+                    else
+                    {
+                        document.getElementById("parz").textContent = "Wynik jest nie parzysty";
+                        document.getElementById("wynik").style.color = "red";
+                    }
+                }
+                else{
+                    document.getElementById("wynik").textContent = "Nie dziel przez zero";
+                }
+            }
+        }
+        
+    </script>
+</body>
+</html>

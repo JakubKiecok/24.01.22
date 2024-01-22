@@ -1,0 +1,22 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#clock{
+    display: flex;
+    width: 100vw;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+    font-size: 10rem;
+    background-color: gray;
+}
+#dodanie{
+    display: flex;
+    width: 100vw;
+    height: 50vh;
+    justify-content: center;
+    font-size: 10rem;
+    background-color: gray;
+}

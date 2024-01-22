@@ -1,0 +1,54 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.top{
+    display: flex;
+    justify-content: space-around;
+    background-color: gray;
+    padding: 50px 0px 50px 0px;
+}
+.A{
+    font-size: 2rem;
+}
+.A input{
+    height: 1rem;
+    width: 200px;
+}
+.B{
+    font-size: 2rem;
+}
+.B input{
+    height: 1rem;
+    width: 200px;
+}
+.C{
+    font-size: 2rem;
+}
+.C input{
+    height: 1rem;
+    width: 200px;
+}
+.srodek{
+    display: flex;
+    justify-content: space-around;
+    background-color: gray;
+    padding: 50px 0px 50px 0px;
+}
+.srodek div{
+    font-size: 2rem;
+}
+.bottom{
+    height: calc(100vh - 100px - 100px - 2rem - 2rem - 10px);
+    background-color: gray;
+    font-size: 2rem;
+}
+.X{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#wynik{
+    font-size: 5rem;
+}
